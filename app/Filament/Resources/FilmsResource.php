@@ -53,6 +53,7 @@ class FilmsResource extends Resource
 
     public static function table(Table $table): Table
     {
+        // test
         return $table
             ->columns([
                 TextColumn::make('title'),
