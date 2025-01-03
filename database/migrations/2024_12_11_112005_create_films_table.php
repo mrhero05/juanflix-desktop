@@ -3,9 +3,11 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 return new class extends Migration
 {
+    use SoftDeletes;
     /**
      * Run the migrations.
      */
@@ -22,8 +24,7 @@ return new class extends Migration
             $table->text('thumbnail')->nullable();
             $table->string('rating');
             $table->string('duration');
-            $table->dateTime('started_at');
-            $table->dateTime('ended_at');
+            $table->softDeletes()->default(null);
             $table->timestamps();
         });
     }

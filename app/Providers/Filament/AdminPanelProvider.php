@@ -25,8 +25,10 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->path('admin')
+            ->path('admin-juanflix')
             ->login()
+            ->brandLogo(asset('images/juanflix-icon.png'))
+            ->favicon(asset('images/juanflix-icon.png'))
             ->colors([
                 'primary' => Color::Amber,
             ])
